@@ -7,11 +7,14 @@ import android.widget.AdapterView;
 
 import java.util.List;
 
+import butterknife.ButterKnife;
+
 /**
  * Created by jennatauro on 2015-01-05.
  */
 public class SectionedRecyclerViewAdapter<T, VH extends SectionedRecyclerViewAdapter.RecyclerViewBaseHolder> extends RecyclerView.Adapter<VH> implements ViewAdapter<T> {
 
+    List<T> mItems;
 
     @Override
     public VH onCreateViewHolder(ViewGroup viewGroup, int i) {
@@ -30,7 +33,8 @@ public class SectionedRecyclerViewAdapter<T, VH extends SectionedRecyclerViewAda
 
     @Override
     public void replace(List<T> objects) {
-
+        mItems = objects;
+        notifyDataSetChanged();
     }
 
     public static class RecyclerViewBaseHolder extends RecyclerView.ViewHolder {
@@ -38,6 +42,7 @@ public class SectionedRecyclerViewAdapter<T, VH extends SectionedRecyclerViewAda
 
         public RecyclerViewBaseHolder(View view, SectionedRecyclerViewAdapter adapter) {
             super(view);
+            ButterKnife.inject(this, view);
             mAdapter = adapter;
         }
     }

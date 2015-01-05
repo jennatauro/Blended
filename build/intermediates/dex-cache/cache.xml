@@ -2,6 +2,13 @@
 <items version="2" >
 
     <item
+        jar="/Users/jennatauro/Documents/Personal Projects/SectionedListRecyclerView/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b8945fc23a7461c6fdde15753456d64b0a9358b">
+        <dex dex="/Users/jennatauro/Documents/Personal Projects/SectionedListRecyclerView/app/build/intermediates/pre-dexed/debug/classes-dbf7a3e6e288337c683d7842a823852d20396fb4.jar" />
+    </item>
+    <item
         jar="/Users/jennatauro/Documents/Personal Projects/SectionedListRecyclerView/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
         jumboMode="false"
         revision="21.1.2"

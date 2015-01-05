@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.jennatauro.sectionedlistrecyclerview.models.SoccerPlayer;
+import com.timehop.stickyheadersrecyclerview.StickyRecyclerHeadersDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,6 +51,7 @@ public class MainActivity extends ActionBarActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);
         mRecyclerView.setAdapter(mSectionedRecyclerViewAdapter);
+        mRecyclerView.addItemDecoration(new StickyRecyclerHeadersDecoration(mSectionedRecyclerViewAdapter));
 
         mSectionedRecyclerViewAdapter.replace(soccerPlayers);
     }

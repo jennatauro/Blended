@@ -1,9 +1,13 @@
 package com.jennatauro.sectionedlistrecyclerview;
 
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+
+import com.jennatauro.sectionedlistrecyclerview.models.SoccerPlayer;
+import com.jennatauro.sectionedlistrecyclerview.viewholders.SoccerPlayerViewHolder;
 
 import java.util.List;
 
@@ -18,17 +22,22 @@ public class SectionedRecyclerViewAdapter<T, VH extends SectionedRecyclerViewAda
 
     @Override
     public VH onCreateViewHolder(ViewGroup viewGroup, int i) {
-        return null;
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.list_item_soccer_player, viewGroup, false);
+        SoccerPlayerViewHolder viewHolder = new SoccerPlayerViewHolder(view, this);
+
+        // set the view's size, margins, padding and layout parameters
+        return (VH) viewHolder;
     }
 
     @Override
     public void onBindViewHolder(VH vh, int i) {
-
+        SoccerPlayer soccerPlayer = (SoccerPlayer) mItems.get(i);
+        ((SoccerPlayerViewHolder) vh).soccerPlayerName.setText(soccerPlayer.getmName());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mItems.size();
     }
 
     @Override

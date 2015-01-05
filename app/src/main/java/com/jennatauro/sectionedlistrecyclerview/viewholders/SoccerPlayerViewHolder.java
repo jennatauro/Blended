@@ -6,6 +6,7 @@ import android.widget.TextView;
 import com.jennatauro.sectionedlistrecyclerview.R;
 import com.jennatauro.sectionedlistrecyclerview.SectionedRecyclerViewAdapter;
 
+import butterknife.ButterKnife;
 import butterknife.InjectView;
 
 /**
@@ -14,9 +15,10 @@ import butterknife.InjectView;
 public class SoccerPlayerViewHolder extends SectionedRecyclerViewAdapter.RecyclerViewBaseHolder {
 
     @InjectView(R.id.soccer_player_name)
-    TextView soccerPlayerName;
+    public TextView soccerPlayerName;
 
     public SoccerPlayerViewHolder(View view, SectionedRecyclerViewAdapter adapter) {
         super(view, adapter);
+        ButterKnife.inject(this, view);
     }
 }

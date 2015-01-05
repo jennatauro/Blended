@@ -7,10 +7,10 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/soccerball"/>
+        android:src="@drawable/basketball"/>
 
     <TextView
-        android:id="@+id/soccer_player_name"
+        android:id="@+id/basketball_player_name"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

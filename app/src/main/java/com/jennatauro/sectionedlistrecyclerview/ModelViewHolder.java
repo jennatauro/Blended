@@ -13,4 +13,6 @@ public interface ModelViewHolder<VH> {
     public void bindViewHolder(SectionedRecyclerViewAdapter.RecyclerViewBaseHolder vh);
 
     public String getHeaderTitle();
+
+    public int getResourceLayoutId();
 }

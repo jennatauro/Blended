@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.jennatauro.sectionedlistrecyclerview.models.SectionListItemObject;
 import com.jennatauro.sectionedlistrecyclerview.models.SoccerPlayer;
 import com.jennatauro.sectionedlistrecyclerview.viewholders.SoccerPlayerViewHolder;
 import com.timehop.stickyheadersrecyclerview.StickyRecyclerHeadersAdapter;
@@ -18,7 +17,7 @@ import butterknife.ButterKnife;
 /**
  * Created by jennatauro on 2015-01-05.
  */
-public class SectionedRecyclerViewAdapter<T extends SectionListItemObject, VH extends SectionedRecyclerViewAdapter.RecyclerViewBaseHolder> extends RecyclerView.Adapter<VH> implements ViewAdapter<T>, StickyRecyclerHeadersAdapter {
+public class SectionedRecyclerViewAdapter<T extends ModelViewHolder, VH extends SectionedRecyclerViewAdapter.RecyclerViewBaseHolder> extends RecyclerView.Adapter<VH> implements ViewAdapter<T>, StickyRecyclerHeadersAdapter {
 
     List<T> mItems;
 
@@ -28,7 +27,7 @@ public class SectionedRecyclerViewAdapter<T extends SectionListItemObject, VH ex
     @Override
     public int getItemViewType(int position) {
         mPosition = position;
-        return mItems.get(position).getListItemResource();
+        return mItems.get(position).getResourceLayoutId();
     }
 
 
@@ -57,7 +56,7 @@ public class SectionedRecyclerViewAdapter<T extends SectionListItemObject, VH ex
 
     @Override
     public long getHeaderId(int i) {
-        return mItems.get(i).getListItemResource();
+        return mItems.get(i).getResourceLayoutId();
     }
 
     @Override

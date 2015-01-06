@@ -7,7 +7,6 @@ import android.support.v7.widget.RecyclerView;
 
 import com.jennatauro.sectionedlistrecyclerview.models.BasketballPlayer;
 import com.jennatauro.sectionedlistrecyclerview.models.HockeyPlayer;
-import com.jennatauro.sectionedlistrecyclerview.models.SectionListItemObject;
 import com.jennatauro.sectionedlistrecyclerview.models.SoccerPlayer;
 import com.timehop.stickyheadersrecyclerview.StickyRecyclerHeadersDecoration;
 
@@ -15,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class MainActivity<T extends SectionListItemObject> extends ActionBarActivity {
+public class MainActivity<T extends ModelViewHolder> extends ActionBarActivity {
 
     RecyclerView mRecyclerView;
 
@@ -47,19 +46,15 @@ public class MainActivity<T extends SectionListItemObject> extends ActionBarActi
 
         SoccerPlayer soccerPlayer1 = new SoccerPlayer();
         soccerPlayer1.setmName("Lionel Messi");
-        soccerPlayer1.setListItemResource(R.layout.list_item_soccer_player);
 
         SoccerPlayer soccerPlayer2 = new SoccerPlayer();
         soccerPlayer2.setmName("Cristiano Ronaldo");
-        soccerPlayer2.setListItemResource(R.layout.list_item_soccer_player);
 
         SoccerPlayer soccerPlayer3 = new SoccerPlayer();
         soccerPlayer3.setmName("Neymar Jr");
-        soccerPlayer3.setListItemResource(R.layout.list_item_soccer_player);
 
         SoccerPlayer soccerPlayer4 = new SoccerPlayer();
         soccerPlayer4.setmName("James Rodriguez");
-        soccerPlayer4.setListItemResource(R.layout.list_item_soccer_player);
 
         mPlayers.add((T) soccerPlayer1);
         mPlayers.add((T) soccerPlayer2);
@@ -68,19 +63,15 @@ public class MainActivity<T extends SectionListItemObject> extends ActionBarActi
 
         HockeyPlayer hockeyPlayer1 = new HockeyPlayer();
         hockeyPlayer1.setmName("Sidney Crosby");
-        hockeyPlayer1.setListItemResource(R.layout.list_item_hockey_player);
 
         HockeyPlayer hockeyPlayer2 = new HockeyPlayer();
         hockeyPlayer2.setmName("Wayne Gretzky");
-        hockeyPlayer2.setListItemResource(R.layout.list_item_hockey_player);
 
         HockeyPlayer hockeyPlayer3 = new HockeyPlayer();
         hockeyPlayer3.setmName("Alexander Ovechkin");
-        hockeyPlayer3.setListItemResource(R.layout.list_item_hockey_player);
 
         HockeyPlayer hockeyPlayer4 = new HockeyPlayer();
         hockeyPlayer4.setmName("Bobby Orr");
-        hockeyPlayer4.setListItemResource(R.layout.list_item_hockey_player);
 
         mPlayers.add((T) hockeyPlayer1);
         mPlayers.add((T) hockeyPlayer2);
@@ -89,19 +80,15 @@ public class MainActivity<T extends SectionListItemObject> extends ActionBarActi
 
         BasketballPlayer basketballPlayer1 = new BasketballPlayer();
         basketballPlayer1.setmName("Kyle Lowry");
-        basketballPlayer1.setListItemResource(R.layout.list_item_basketball_player);
 
         BasketballPlayer basketballPlayer2 = new BasketballPlayer();
         basketballPlayer2.setmName("Kobe Bryant");
-        basketballPlayer2.setListItemResource(R.layout.list_item_basketball_player);
 
         BasketballPlayer basketballPlayer3 = new BasketballPlayer();
         basketballPlayer3.setmName("LeBron James");
-        basketballPlayer3.setListItemResource(R.layout.list_item_basketball_player);
 
         BasketballPlayer basketballPlayer4 = new BasketballPlayer();
         basketballPlayer4.setmName("Dwight Howard");
-        basketballPlayer4.setListItemResource(R.layout.list_item_basketball_player);
 
         mPlayers.add((T) basketballPlayer1);
         mPlayers.add((T) basketballPlayer2);

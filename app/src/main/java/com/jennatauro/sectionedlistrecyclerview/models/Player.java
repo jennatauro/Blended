@@ -5,7 +5,7 @@ import com.jennatauro.sectionedlistrecyclerview.ModelViewHolder;
 /**
  * Created by jennatauro on 2015-01-05.
  */
-public abstract class Player extends SectionListItemObject implements ModelViewHolder {
+public abstract class Player implements ModelViewHolder {
 
     private String mName;
     private String mTeam;

@@ -2,6 +2,7 @@ package com.jennatauro.sectionedlistrecyclerview.models;
 
 import android.view.View;
 
+import com.jennatauro.sectionedlistrecyclerview.R;
 import com.jennatauro.sectionedlistrecyclerview.SectionedRecyclerViewAdapter;
 import com.jennatauro.sectionedlistrecyclerview.viewholders.BasketballPlayerViewHolder;
 
@@ -33,5 +34,10 @@ public class BasketballPlayer extends Player{
     @Override
     public String getHeaderTitle() {
         return "BASKETBALL PLAYERS";
+    }
+
+    @Override
+    public int getResourceLayoutId() {
+        return R.layout.list_item_basketball_player;
     }
 }

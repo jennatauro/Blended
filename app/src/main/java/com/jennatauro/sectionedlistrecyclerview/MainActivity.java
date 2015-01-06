@@ -4,9 +4,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.Menu;
-import android.view.MenuItem;
 
+import com.jennatauro.sectionedlistrecyclerview.models.SectionListItemObject;
 import com.jennatauro.sectionedlistrecyclerview.models.SoccerPlayer;
 import com.timehop.stickyheadersrecyclerview.StickyRecyclerHeadersDecoration;
 
@@ -14,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity<T extends SectionListItemObject> extends ActionBarActivity {
 
     RecyclerView mRecyclerView;
 
@@ -29,21 +28,25 @@ public class MainActivity extends ActionBarActivity {
 
         SoccerPlayer soccerPlayer1 = new SoccerPlayer();
         soccerPlayer1.setmName("YO");
+        soccerPlayer1.setListItemResource(R.layout.list_item_soccer_player);
 
         SoccerPlayer soccerPlayer2 = new SoccerPlayer();
         soccerPlayer2.setmName("YO2");
+        soccerPlayer2.setListItemResource(R.layout.list_item_soccer_player);
 
         SoccerPlayer soccerPlayer3 = new SoccerPlayer();
         soccerPlayer3.setmName("YO3");
+        soccerPlayer3.setListItemResource(R.layout.list_item_soccer_player);
 
         SoccerPlayer soccerPlayer4 = new SoccerPlayer();
         soccerPlayer4.setmName("YO4");
+        soccerPlayer4.setListItemResource(R.layout.list_item_soccer_player);
 
-        List<SoccerPlayer> soccerPlayers = new ArrayList<>();
-        soccerPlayers.add(soccerPlayer1);
-        soccerPlayers.add(soccerPlayer2);
-        soccerPlayers.add(soccerPlayer3);
-        soccerPlayers.add(soccerPlayer4);
+        List<T> players = new ArrayList<>();
+        players.add((T) soccerPlayer1);
+        players.add((T) soccerPlayer2);
+        players.add((T) soccerPlayer3);
+        players.add((T) soccerPlayer4);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
@@ -53,7 +56,7 @@ public class MainActivity extends ActionBarActivity {
         mRecyclerView.setAdapter(mSectionedRecyclerViewAdapter);
         mRecyclerView.addItemDecoration(new StickyRecyclerHeadersDecoration(mSectionedRecyclerViewAdapter));
 
-        mSectionedRecyclerViewAdapter.replace(soccerPlayers);
+        mSectionedRecyclerViewAdapter.replace(players);
     }
 
 }

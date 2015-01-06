@@ -1,5 +1,10 @@
 package com.jennatauro.sectionedlistrecyclerview.models;
 
+import android.view.View;
+
+import com.jennatauro.sectionedlistrecyclerview.SectionedRecyclerViewAdapter;
+import com.jennatauro.sectionedlistrecyclerview.viewholders.SoccerPlayerViewHolder;
+
 /**
  * Created by jennatauro on 2015-01-05.
  */
@@ -15,4 +20,13 @@ public class SoccerPlayer extends Player{
         this.mSoccerGoals = mSoccerGoals;
     }
 
+    @Override
+    public Object createViewHolder(View view, SectionedRecyclerViewAdapter adapter) {
+        return new SoccerPlayerViewHolder(view, adapter);
+    }
+
+    @Override
+    public void bindViewHolder(SectionedRecyclerViewAdapter.RecyclerViewBaseHolder vh) {
+        ((SoccerPlayerViewHolder) vh).soccerPlayerName.setText(getmName());
+    }
 }

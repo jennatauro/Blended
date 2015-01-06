@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.jennatauro.sectionedlistrecyclerview.models.BasketballPlayer;
 import com.jennatauro.sectionedlistrecyclerview.models.HockeyPlayer;
 import com.jennatauro.sectionedlistrecyclerview.models.SectionListItemObject;
 import com.jennatauro.sectionedlistrecyclerview.models.SoccerPlayer;
@@ -85,6 +86,27 @@ public class MainActivity<T extends SectionListItemObject> extends ActionBarActi
         mPlayers.add((T) hockeyPlayer2);
         mPlayers.add((T) hockeyPlayer3);
         mPlayers.add((T) hockeyPlayer4);
+
+        BasketballPlayer basketballPlayer1 = new BasketballPlayer();
+        basketballPlayer1.setmName("Kyle Lowry");
+        basketballPlayer1.setListItemResource(R.layout.list_item_basketball_player);
+
+        BasketballPlayer basketballPlayer2 = new BasketballPlayer();
+        basketballPlayer2.setmName("Kobe Bryant");
+        basketballPlayer2.setListItemResource(R.layout.list_item_basketball_player);
+
+        BasketballPlayer basketballPlayer3 = new BasketballPlayer();
+        basketballPlayer3.setmName("LeBron James");
+        basketballPlayer3.setListItemResource(R.layout.list_item_basketball_player);
+
+        BasketballPlayer basketballPlayer4 = new BasketballPlayer();
+        basketballPlayer4.setmName("Dwight Howard");
+        basketballPlayer4.setListItemResource(R.layout.list_item_basketball_player);
+
+        mPlayers.add((T) basketballPlayer1);
+        mPlayers.add((T) basketballPlayer2);
+        mPlayers.add((T) basketballPlayer3);
+        mPlayers.add((T) basketballPlayer4);
 
     }
 

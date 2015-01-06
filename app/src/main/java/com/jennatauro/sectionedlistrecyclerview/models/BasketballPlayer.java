@@ -3,6 +3,7 @@ package com.jennatauro.sectionedlistrecyclerview.models;
 import android.view.View;
 
 import com.jennatauro.sectionedlistrecyclerview.SectionedRecyclerViewAdapter;
+import com.jennatauro.sectionedlistrecyclerview.viewholders.BasketballPlayerViewHolder;
 
 /**
  * Created by jennatauro on 2015-01-05.
@@ -21,11 +22,11 @@ public class BasketballPlayer extends Player{
 
     @Override
     public Object createViewHolder(View view, SectionedRecyclerViewAdapter adapter) {
-        return null;
+        return new BasketballPlayerViewHolder(view, adapter);
     }
 
     @Override
     public void bindViewHolder(SectionedRecyclerViewAdapter.RecyclerViewBaseHolder vh) {
-
+        ((BasketballPlayerViewHolder) vh).basketballPlayerName.setText(getmName());
     }
 }

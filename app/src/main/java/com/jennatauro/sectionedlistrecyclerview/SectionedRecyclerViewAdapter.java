@@ -22,12 +22,21 @@ public class SectionedRecyclerViewAdapter<T extends SectionListItemObject, VH ex
 
     List<T> mItems;
 
+    int mPosition;
+
+
+    @Override
+    public int getItemViewType(int position) {
+        mPosition = position;
+        return mItems.get(position).getListItemResource();
+    }
+
+
     @Override
     public VH onCreateViewHolder(ViewGroup viewGroup, int i) {
-        T item = mItems.get(i);
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(item.getListItemResource(), viewGroup, false);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(i, viewGroup, false);
 
-        return (VH) item.createViewHolder(view, this);
+        return (VH) mItems.get(mPosition).createViewHolder(view, this);
     }
 
     @Override

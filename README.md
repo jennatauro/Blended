@@ -17,7 +17,7 @@ You will need to include this in your gradle dependencies before you begin:
 
 1. Include as a Library Project.
 
-2. Create your models that will be in the list and have them implement ModelViewHolder.  Implementation could look something like this:
+2. Create your models that will be in the list and have each of them implement ModelViewHolder.  They will each use their own layout resource file, header title, and view holder in the bindViewHolder() method.  Implementation could look something like this:
 
 		@Override
 	    public void bindViewHolder(SectionedRecyclerViewAdapter.RecyclerViewBaseHolder vh) {
@@ -34,7 +34,15 @@ You will need to include this in your gradle dependencies before you begin:
 	        return R.layout.list_item_soccer_player;
 	    }
 
-3. Create layout resource files for each model's list item.
+3. Create layout resource files for each model's list item. In this example the layout resource file has this textview:
+
+        <TextView
+            android:id="@+id/soccer_player_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/image"
+            android:layout_centerVertical="true" />
+
 
 4. Create ViewHolders for each model.  ViewHolders could look something like this:
 
@@ -86,3 +94,11 @@ And that's it!
 
 Credits
 =======
+
+[Butterknife][1]
+
+[StickyHeadersRecyclerView][2]
+
+
+[1]: https://github.com/JakeWharton/butterknife
+[2]: https://github.com/timehop/sticky-headers-recyclerview

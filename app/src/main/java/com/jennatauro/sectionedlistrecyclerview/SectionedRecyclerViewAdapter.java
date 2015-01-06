@@ -57,7 +57,7 @@ public class SectionedRecyclerViewAdapter<T extends SectionListItemObject, VH ex
 
     @Override
     public long getHeaderId(int i) {
-        return i+1;
+        return mItems.get(i).getListItemResource();
     }
 
     @Override
@@ -75,7 +75,7 @@ public class SectionedRecyclerViewAdapter<T extends SectionListItemObject, VH ex
         textView.setPadding(20, 20, 20, 20);
         textView.setTextSize(15);
 
-        textView.setText("Header");
+        textView.setText(mItems.get(i).getHeaderTitle());
     }
 
     public static class RecyclerViewBaseHolder extends RecyclerView.ViewHolder {

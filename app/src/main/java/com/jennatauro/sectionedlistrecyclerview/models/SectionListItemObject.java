@@ -11,16 +11,6 @@ import com.jennatauro.sectionedlistrecyclerview.SectionedRecyclerViewAdapter;
 public abstract class SectionListItemObject implements ModelViewHolder {
 
     private int listItemResource;
-    private String listHeaderTitle;
-
-
-    public String getListHeaderTitle() {
-        return listHeaderTitle;
-    }
-
-    public void setListHeaderTitle(String listHeaderTitle) {
-        this.listHeaderTitle = listHeaderTitle;
-    }
 
     public int getListItemResource() {
         return listItemResource;

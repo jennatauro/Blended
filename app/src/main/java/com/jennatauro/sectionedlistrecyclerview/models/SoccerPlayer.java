@@ -29,4 +29,9 @@ public class SoccerPlayer extends Player{
     public void bindViewHolder(SectionedRecyclerViewAdapter.RecyclerViewBaseHolder vh) {
         ((SoccerPlayerViewHolder) vh).soccerPlayerName.setText(getmName());
     }
+
+    @Override
+    public String getHeaderTitle() {
+        return "SOCCER PLAYERS";
+    }
 }

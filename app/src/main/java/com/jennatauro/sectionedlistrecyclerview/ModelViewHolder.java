@@ -11,4 +11,6 @@ public interface ModelViewHolder<VH> {
     public VH createViewHolder(View view, SectionedRecyclerViewAdapter adapter);
 
     public void bindViewHolder(SectionedRecyclerViewAdapter.RecyclerViewBaseHolder vh);
+
+    public String getHeaderTitle();
 }

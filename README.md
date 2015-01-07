@@ -15,7 +15,7 @@ You will need to include this in your gradle dependencies before you begin:
 	    compile 'com.jakewharton:butterknife:6.0.0'
 	    compile 'com.timehop.stickyheadersrecyclerview:library:0.3.3@aar'
 
-1. Include as a Library Project.
+1. Clone this repository.  Open your project in Android Studio and go to File > Import Module and select the sectioned-list-recycler-view-library folder, from whatever directory you cloned it to.
 
 2. Create your models that will be in the list and have each of them implement ModelViewHolder.  They will each use their own layout resource file, header title, and view holder in the bindViewHolder() method.  Implementation could look something like this:
 

@@ -1,0 +1,24 @@
+package com.jennatauro.sample.viewholders;
+
+import android.view.View;
+import android.widget.TextView;
+
+import com.jennatauro.sample.R;
+import com.jennatauro.sectioned_list_recycler_view_library.SectionedRecyclerViewAdapter;
+
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+
+/**
+ * Created by jennatauro on 2015-01-05.
+ */
+public class SoccerPlayerViewHolder extends SectionedRecyclerViewAdapter.RecyclerViewBaseHolder {
+
+    @InjectView(R.id.soccer_player_name)
+    public TextView soccerPlayerName;
+
+    public SoccerPlayerViewHolder(View view, SectionedRecyclerViewAdapter adapter) {
+        super(view, adapter);
+        ButterKnife.inject(this, view);
+    }
+}

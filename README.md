@@ -58,7 +58,7 @@ You will need to include this in your gradle dependencies before you begin:
 		}	
 
 
-5. Populate your list in your own way and setup your RecyclerView with a SectionedRecyclerViewAdapter.
+5. Populate your list in your own way and setup your RecyclerView with a BlendedRecyclerViewAdapter.
 
 		public class MainActivity<T extends ModelViewHolder> extends ActionBarActivity {
 
